@@ -1,0 +1,16 @@
+DOOM-FIRE-DOS
+-------------
+
+This algorithm was originally made by @filipedeschamps, I just implemented it in C for the x86 DOS System.
+
+I also created a minimal graphics library using the 13h VGA mode (https://en.wikipedia.org/wiki/Mode_13h). You can edit it and use in your program if you want. 
+
+You can download the binary file 'FIRE.EXE' in the '/BIN' directory or compile it with the Borland C++ compiler for DOS with:
+`%BORLAND_CPP_PATH%/BIN/TCC MAIN.C`
+
+Checksums (SHA256):
+	1736feb89de51e7f9f52e95dbe550cfc5feac79bac6298475f56a6dfa98ea891  MAIN.C
+	67d45eda27fbb615bebfb14e046fc948c938cacd69be2a303311e6b10729fb6b  GRAPHIC.H
+	7c653a8c63e373ed336ad7e0a6af4e1c6d9c3e4d2d8b9a657a81cfe960db8cc6  MAIN.OBJ
+	75490cde7bfa680833074f684c84a029674cdade2ad74536e929523625c4298c  GRAPHIC.OBJ
+	1efeed7e33bad7636c31ef7408818f8882310039524958e5839b59871368d569  MAIN.EXE  	 
