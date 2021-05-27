@@ -47,20 +47,6 @@ CreateDataStructure()
 }
 
 static void
-ViewDataStructure()
-{
-	unsigned x;
-
-	SetText();
-
-	for (x = 0; x < TOTAL_PIXELS; x++) {
-		printf("%d - %d\n", x, PixelsArray[x]);
-	}
-
-	getchar();
-}
-
-static void
 UpdateCanvas()
 {
 	unsigned x, y, z;
@@ -140,54 +126,6 @@ CalculatePropagation()
 	}
 
 	UpdateCanvas();
-}
-
-static void
-IncreaseFireSource()
-{
-	unsigned int Column;
-
-	for (Column = 0; Column <= FIRE_WIDTH; Column++) {
-		unsigned int PixelIndex = (TOTAL_PIXELS - FIRE_WIDTH) + Column;
-		unsigned int CurrentFireIntensity = PixelsArray[PixelIndex];
-
-		if (CurrentFireIntensity < 19) {
-			unsigned int Increase = (unsigned int) rand() % 4;
-			unsigned int NewFireIntensity;
-
-			if (CurrentFireIntensity + Increase >= 19) {
-				NewFireIntensity = 19;
-			} else {
-				NewFireIntensity += Increase;
-			}
-
-			PixelsArray[PixelIndex] = NewFireIntensity;
-		}
-	}
-}
-
-static void
-DecreaseFireSource()
-{
-	unsigned int Column;
-
-	for (Column = 0; Column <= FIRE_WIDTH; Column++) {
-		unsigned int PixelIndex = (TOTAL_PIXELS - FIRE_WIDTH) + Column;
-		unsigned int CurrentFireIntensity = PixelsArray[PixelIndex];
-		unsigned int NewFireIntensity;
-
-		if (CurrentFireIntensity > 0) {
-			unsigned int Decay = rand() % 4;
-
-			if (CurrentFireIntensity - Decay >= 0) {
-				NewFireIntensity = 0;
-			} else {
-				NewFireIntensity = CurrentFireIntensity - Decay;
-			}
-
-			PixelsArray[PixelIndex] = NewFireIntensity;
-		}
-	}
 }
 
 static void
