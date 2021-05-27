@@ -9,10 +9,8 @@ It is recommended to use 60.000 cycles or more in DosBox to have a good result. 
 
 If you don't want to download DosBox, you can check out the demo in /demo.gif.
 
-You can download the binary file 'FIRE.EXE' in the '/BIN' directory or compile it with the Borland C++ compiler for DOS with:
+You can download the binary file 'MAIN.EXE' in the '/BIN' directory or compile it with the Borland C++ compiler for DOS with:
 `%BORLAND_CPP_PATH%/BIN/TCC MAIN.C`
-
-If you don't want to download DosBox to test
 
 Checksums (SHA256):
 	1736feb89de51e7f9f52e95dbe550cfc5feac79bac6298475f56a6dfa98ea891  MAIN.C
