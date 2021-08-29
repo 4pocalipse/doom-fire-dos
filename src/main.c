@@ -152,10 +152,6 @@ main(int argc, char **argv)
 
 	srand(time(0)); // For Pseudo-random fire decay
 
-	if (argv[1] == '-d')
-		printf("DEBUG MODE ENABLED\n"
-			     "------------------");
-
 	printf("Press any key to START\n"
 		   "While running, press Q to quit.");
 
@@ -163,11 +159,7 @@ main(int argc, char **argv)
 
 	CreateDataStructure();
 	CreateFireSource();
-	if (argv[1] == '-d')
-		ViewDataStructure();
-
 	SetGraphic();
-
 	StartFire();
 
 	SetText();
